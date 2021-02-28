@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aventus Test Reports</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+    <!-- #region datatables files -->
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    <!-- #endregion -->
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="normalize.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Test Coverage Reports</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Opus</a></li>
+                <li><a href="platform.html">Platform</a></li>
+                <li><a href="https://aventus.testrail.io/index.php?%2Fdashboard&fbclid=IwAR1DGLb3lEM_GCCN5gxfM-AVInxBgOd3fURP7vrJTAAFHQvQ0ZZq5HOeSug">Test Rail Backend</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="display-4">{Title} ENDPOINTS COVERAGE</h2>
+        <p></p>
+        <div class="col-sm-6">
+            <canvas id="bar-chart" width="200" height="200"></canvas>
+            <script>
+                    new Chart(document.getElementById("bar-chart"), {
+                        type: 'bar',
+                        data: {
+                            labels: [{SectionNames}],
+                            datasets: [
+                                {
+                                    label: "Number of test cases",
+                                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850",
+                                        "#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#8e5ea2", "#3cba9f", "#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9"],
+                                    data: [{TestCasesPerSection}]
+                                }
+                            ]
+                        },
+                        options: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: 'Test coverage for endpoint groups'
+                            },
+                            layout: {
+                                padding: {
+                                    left: 0,
+                                    right: 0,
+                                    top: 80,
+                                    bottom: 60
+                                }
+                            },
+                            scaleShowValues: true,
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        autoSkip: false
+                                    }
+                                }]
+                            }
+                        }
+                    });
+            </script>
+        </div>
+        <div class="col-sm-6">
+           <canvas id="doughnut-chart" width="20" height="20"></canvas>
+             <script>
+                 new Chart(document.getElementById("doughnut-chart"), {
+                     type: 'doughnut',
+                     data: {
+                         labels: ["Non-covered", "Covered"],
+                         datasets: [
+                             {
+                                 backgroundColor: [
+                                     "#c45850",
+                                     "#3cba9f"
+
+                                 ],
+                                 data: [{NonCoveredTestCasesNumber}, {CoveredTestCasesNumber}]
+                             }
+                         ]
+                     },
+                     options: {
+                         legend: { display: true, position: 'bottom' },
+                         title: {
+                             display: true,
+                             text: 'Total test coverage'
+                         },
+                         layout: {
+                             padding: {
+                                 left: 10,
+                                 right: 10,
+                                 top: 80,
+                                 bottom: 100
+                             }
+                         }
+                     }
+                 });
+             </script>
+        </div>
+        <h4 style="margin-bottom: 20px">LIST OF THE TEST CASES PER ENDPOINT</h4>
+        <div>
+            {Table}
+        </div>
+        <script>
+            $('#tableFilter').bootstrapTable({
+                pagination: true,
+                pageSize: 100
+            });
+        </script>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var pathname = window.location.pathname;
+            var page = pathname.split("/").pop();
+            $('.nav.navbar-nav > li > a[href="' + page + '"]').parent().addClass('active');
+        });
+    </script>
+
+</body>
+</html>
+
