@@ -7,7 +7,7 @@ namespace test_reports.APITestCoverageReport
 {
     public class EndpointsMap
     {
-        public Dictionary<string, Tuple<string, string>> OpusEndpointsMap()
+        public Dictionary<string, Tuple<string, string>> testEndpointsMap()
         {
             var dictionary = new Dictionary<string, Tuple<string, string>>
             {
@@ -18,22 +18,22 @@ namespace test_reports.APITestCoverageReport
                 {"Send quote documents to a provided email address", new Tuple<string,string>("POST /v1/document/email/quote", "Document") },
                 {"Add a note to a quote document", new Tuple<string,string>("POST /v1/notes/quote/{quoteID}", "Notes") },
                 {"Get notes for a quote", new Tuple<string,string>("GET /v1/notes/quote/{quoteID}", "Notes") },
-                {"AddOrgClaim", new Tuple<string,string>("POST /v1/opusorgs/claims/add", "Opus Organization Management") },
-                {"GetAllOrgClaims",new Tuple<string,string>("GET /v1/opusorgs/claims/list", "Opus Organization Management") },
-                {"RemoveOrgClaim", new Tuple<string,string>("POST /v1/opusorgs/claims/remove", "Opus Organization Management") },
-                {"Add Group", new Tuple<string,string>("POST /v1/opusorgs/groups/add", "Opus Organization Management") },
-                {"List Groups", new Tuple<string,string>("POST /v1/opusorgs/groups/list", "Opus Organization Management") },
-                {"GetUser", new Tuple<string,string>("GET /v1/opususers/{userID}", "Opus User Management") },
-                {"Update User", new Tuple<string,string>("PUT /v1/opususers/{userID}", "Opus User Management") },
-                {"Remove User", new Tuple<string,string>("DELETE /v1/opususers/{userID}", "Opus User Management") },
-                {"AddUser Claim", new Tuple<string,string>("POST /v1/opususers/{userID}/claims/add", "Opus User Management") },
-                {"Remove User Claim", new Tuple<string,string>("POST /v1/opususers/{userID}/claims/remove", "Opus User Management") },
-                {"Disable User", new Tuple<string,string>("POST /v1/opususers/{userID}/claims/disable", "Opus User Management") },
-                {"Add User Group", new Tuple<string,string>("POST /v1/opususers/{userID}/groups/add", "Opus User Management") },
-                {"Remove User Group", new Tuple<string,string>("POST /v1/opususers/{userID}/groups/remove", "Opus User Management") },
-                {"Add User", new Tuple<string,string>("POST /v1/opususers/add", "Opus User Management") },
-                {"Get All Users", new Tuple<string,string>("GET /v1/opususers/list", "Opus User Management") },
-                {"Get All Users With Claims", new Tuple<string,string>("POST /v1/opususers/list/claims", "Opus User Management") },
+                {"AddOrgClaim", new Tuple<string,string>("POST /v1/testorgs/claims/add", "test Organization Management") },
+                {"GetAllOrgClaims",new Tuple<string,string>("GET /v1/testorgs/claims/list", "test Organization Management") },
+                {"RemoveOrgClaim", new Tuple<string,string>("POST /v1/testorgs/claims/remove", "test Organization Management") },
+                {"Add Group", new Tuple<string,string>("POST /v1/testorgs/groups/add", "test Organization Management") },
+                {"List Groups", new Tuple<string,string>("POST /v1/testorgs/groups/list", "test Organization Management") },
+                {"GetUser", new Tuple<string,string>("GET /v1/testusers/{userID}", "test User Management") },
+                {"Update User", new Tuple<string,string>("PUT /v1/testusers/{userID}", "test User Management") },
+                {"Remove User", new Tuple<string,string>("DELETE /v1/testusers/{userID}", "test User Management") },
+                {"AddUser Claim", new Tuple<string,string>("POST /v1/testusers/{userID}/claims/add", "test User Management") },
+                {"Remove User Claim", new Tuple<string,string>("POST /v1/testusers/{userID}/claims/remove", "test User Management") },
+                {"Disable User", new Tuple<string,string>("POST /v1/testusers/{userID}/claims/disable", "test User Management") },
+                {"Add User Group", new Tuple<string,string>("POST /v1/testusers/{userID}/groups/add", "test User Management") },
+                {"Remove User Group", new Tuple<string,string>("POST /v1/testusers/{userID}/groups/remove", "test User Management") },
+                {"Add User", new Tuple<string,string>("POST /v1/testusers/add", "test User Management") },
+                {"Get All Users", new Tuple<string,string>("GET /v1/testusers/list", "test User Management") },
+                {"Get All Users With Claims", new Tuple<string,string>("POST /v1/testusers/list/claims", "test User Management") },
                 {"Get Payment", new Tuple<string,string>("GET /v1/payments/{paymentId}", "Payment") },
                 {"Get Policy For Payment", new Tuple<string,string>("GET /v1/payments/{paymentId}/policy", "Payment") },
                 {"Create Finance Agreement", new Tuple<string,string>("POST /v1/payments/finance", "Payment") },
@@ -116,7 +116,7 @@ namespace test_reports.APITestCoverageReport
             return dictionary;
         }
 
-        public Dictionary<string, Tuple<string, string>> PlatformEndpointsMap()
+        public Dictionary<string, Tuple<string, string>> BaseEndpointsMap()
         {
             var dictionary = new Dictionary<string, Tuple<string, string>>
             {
@@ -146,9 +146,9 @@ namespace test_reports.APITestCoverageReport
                 {"Get My Policies", new Tuple<string,string>("GET /v2/policies/mypolicies", "Policies") },
                 {"Get Product (By Reference)", new Tuple<string,string>("GET /v2/product", "Product") },
                 {"Get Product (by id)", new Tuple<string,string>("GET /v2/product/{productID}", "Product") },
-                {"Generate Quick Quote",new Tuple<string,string>("POST /v2/quickquote", "Quick Quotes") },
-                {"Generate a new Quick Quote from partial risk", new Tuple<string,string>("POST /v2/quickquote/frompartialrisk", "Quick Quotes") },
-                {"Populate a full risk from the partial risk collected via widgets etc",new Tuple<string,string>("POST /v2/quickquote/populaterisk", "Quick Quotes") },
+                {"Generate Quick Quote",new Tuple<string,string>("POST /v2/call", "Quick Quotes") },
+                {"Generate a new Quick Quote from partial risk", new Tuple<string,string>("POST /v2/call/frompartialrisk", "Quick Quotes") },
+                {"Populate a full risk from the partial risk collected via widgets etc",new Tuple<string,string>("POST /v2/call/populaterisk", "Quick Quotes") },
                 {"Get Quote", new Tuple<string,string>("GET /v2/quotes/{quoteId}", "Quotes") },
                 {"Get Quote Product", new Tuple<string,string>("GET /v2/quotes/{quoteId}/product", "Quotes") },
                 {"Get Quote Risk", new Tuple<string,string>("GET /v2/quotes/{quoteId}/risk", "Quotes") },

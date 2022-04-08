@@ -21,7 +21,7 @@
     <None Update="Reports\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Reports\platform.html">
+    <None Update="Reports\base.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Templates\TestCoverageTemplate.html">

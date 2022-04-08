@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Aventus Test Reports</title>
+    <title>test Test Reports</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,15 +29,14 @@
                 <a class="navbar-brand" href="index.html">Test Coverage Reports</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="index.html">Opus</a></li>
-                <li><a href="platform.html">Platform</a></li>
-                <li><a href="https://aventus.testrail.io/index.php?%2Fdashboard&fbclid=IwAR1DGLb3lEM_GCCN5gxfM-AVInxBgOd3fURP7vrJTAAFHQvQ0ZZq5HOeSug">Test Rail Backend</a></li>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="endpoints.html">Endpoints</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="container">
-        <h2 class="display-4">PLATFORM ENDPOINTS COVERAGE</h2>
+        <h2 class="display-4">ENDPOINTS COVERAGE</h2>
         <p></p>
         <div class="col-sm-6">
             <canvas id="bar-chart" width="200" height="200"></canvas>
@@ -45,7 +44,7 @@
                     new Chart(document.getElementById("bar-chart"), {
                         type: 'bar',
                         data: {
-                            labels: ['Config', 'Line Of Business', 'Payments', 'Policies','Product', 'Quick Quotes', 'Stripe', 'User', 'Tobes','Subscriptions', 'Quotes', 'Documents'],
+                            labels: ['Region', 'Line Of Business', 'Payments', 'Policies','Product', 'User Quotes', 'Integration', 'User', 'Tabs','Subscriptions', 'Quotes', 'Documents'],
                             datasets: [
                                 {
                                     label: "Number of test cases",
@@ -134,7 +133,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35178&group_by=cases:section_id&group_order=asc&group_id=2472>#35178</a>: Get organisation settings</p>
+<p style='font-size: 12px'><a href=https://testrail.io/index.php>#35178</a>: Get organisation settings</p>
 		</td>
 	</tr>
 	<tr>
@@ -155,7 +154,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35179&group_by=cases:section_id&group_order=asc&group_id=2474>#35179</a>: Get line of business configuration</p>
+<p style='font-size: 12px'><a href=https://testrail.io/index.php>#35179</a>: Get line of business configuration</p>
 		</td>
 	</tr>
 	<tr>
@@ -166,7 +165,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35180&group_by=cases:section_id&group_order=asc&group_id=2475>#35180</a>: Get payment</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35180&group_by=cases:section_id&group_order=asc&group_id=2475>#35180</a>: Get payment</p>
 		</td>
 	</tr>
 	<tr>
@@ -177,7 +176,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35181&group_by=cases:section_id&group_order=asc&group_id=2475>#35181</a>: Get policy for payment</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35181&group_by=cases:section_id&group_order=asc&group_id=2475>#35181</a>: Get policy for payment</p>
 		</td>
 	</tr>
 	<tr>
@@ -238,9 +237,9 @@
 		<td>
 3		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35201&group_by=cases:section_id&group_order=asc&group_id=2475>#35201</a>: Ensure incorrect voucher is declined</p>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35202&group_by=cases:section_id&group_order=asc&group_id=2475>#35202</a>: Ensure correct percent coupon is accepted and works fine</p>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35203&group_by=cases:section_id&group_order=asc&group_id=2475>#35203</a>: Ensure correct fixed coupon is accepted and works fine</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35201&group_by=cases:section_id&group_order=asc&group_id=2475>#35201</a>: Ensure incorrect voucher is declined</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35202&group_by=cases:section_id&group_order=asc&group_id=2475>#35202</a>: Ensure correct percent coupon is accepted and works fine</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35203&group_by=cases:section_id&group_order=asc&group_id=2475>#35203</a>: Ensure correct fixed coupon is accepted and works fine</p>
 		</td>
 	</tr>
 	<tr>
@@ -251,7 +250,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35182&group_by=cases:section_id&group_order=asc&group_id=2476>#35182</a>: Get policy</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35182&group_by=cases:section_id&group_order=asc&group_id=2476>#35182</a>: Get policy</p>
 		</td>
 	</tr>
 	<tr>
@@ -262,7 +261,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35183&group_by=cases:section_id&group_order=asc&group_id=2476>#35183</a>: Get policy add-ons</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35183&group_by=cases:section_id&group_order=asc&group_id=2476>#35183</a>: Get policy add-ons</p>
 		</td>
 	</tr>
 	<tr>
@@ -273,7 +272,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35184&group_by=cases:section_id&group_order=asc&group_id=2476>#35184</a>: Get policy bundle</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35184&group_by=cases:section_id&group_order=asc&group_id=2476>#35184</a>: Get policy bundle</p>
 		</td>
 	</tr>
 	<tr>
@@ -284,7 +283,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35185&group_by=cases:section_id&group_order=asc&group_id=2476>#35185</a>: Get policy credit agreement</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35185&group_by=cases:section_id&group_order=asc&group_id=2476>#35185</a>: Get policy credit agreement</p>
 		</td>
 	</tr>
 	<tr>
@@ -295,7 +294,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35186&group_by=cases:section_id&group_order=asc&group_id=2476>#35186</a>: Get discount policy details when there is no any discount</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35186&group_by=cases:section_id&group_order=asc&group_id=2476>#35186</a>: Get discount policy details when there is no any discount</p>
 		</td>
 	</tr>
 	<tr>
@@ -306,7 +305,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35187&group_by=cases:section_id&group_order=asc&group_id=2476>#35187</a>: Get policy payment method</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35187&group_by=cases:section_id&group_order=asc&group_id=2476>#35187</a>: Get policy payment method</p>
 		</td>
 	</tr>
 	<tr>
@@ -317,7 +316,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35188&group_by=cases:section_id&group_order=asc&group_id=2476>#35188</a>: Get policy product</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35188&group_by=cases:section_id&group_order=asc&group_id=2476>#35188</a>: Get policy product</p>
 		</td>
 	</tr>
 	<tr>
@@ -328,7 +327,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35189&group_by=cases:section_id&group_order=asc&group_id=2476>#35189</a>: Get policy risk</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35189&group_by=cases:section_id&group_order=asc&group_id=2476>#35189</a>: Get policy risk</p>
 		</td>
 	</tr>
 	<tr>
@@ -339,7 +338,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35190&group_by=cases:section_id&group_order=asc&group_id=2476>#35190</a>: Get policy scheme and compare with refference schema</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35190&group_by=cases:section_id&group_order=asc&group_id=2476>#35190</a>: Get policy scheme and compare with refference schema</p>
 		</td>
 	</tr>
 	<tr>
@@ -370,7 +369,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35191&group_by=cases:section_id&group_order=asc&group_id=2476>#35191</a>: Get policy cancellation information</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35191&group_by=cases:section_id&group_order=asc&group_id=2476>#35191</a>: Get policy cancellation information</p>
 		</td>
 	</tr>
 	<tr>
@@ -381,7 +380,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35192&group_by=cases:section_id&group_order=asc&group_id=2476>#35192</a>: Get my policies and compare schema</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35192&group_by=cases:section_id&group_order=asc&group_id=2476>#35192</a>: Get my policies and compare schema</p>
 		</td>
 	</tr>
 	<tr>
@@ -392,7 +391,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35194&group_by=cases:section_id&group_order=asc&group_id=2477>#35194</a>: Get product by reference ID</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35194&group_by=cases:section_id&group_order=asc&group_id=2477>#35194</a>: Get product by reference ID</p>
 		</td>
 	</tr>
 	<tr>
@@ -403,14 +402,14 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35193&group_by=cases:section_id&group_order=asc&group_id=2477>#35193</a>: Get product by ID</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35193&group_by=cases:section_id&group_order=asc&group_id=2477>#35193</a>: Get product by ID</p>
 		</td>
 	</tr>
 	<tr>
 		<td>
 <p style='font-size: 12px;font-weight: bold'>Generate Quick Quote</p>		</td>
 		<td>
-<p style='font-size: 12px;font-weight: bold'>POST /v2/quickquote</p>		</td>
+<p style='font-size: 12px;font-weight: bold'>POST /v2/call</p>		</td>
 		<td>
 0		</td>
 		<td>
@@ -420,21 +419,21 @@
 		<td>
 <p style='font-size: 12px;font-weight: bold'>Generate a new Quick Quote from partial risk</p>		</td>
 		<td>
-<p style='font-size: 12px;font-weight: bold'>POST /v2/quickquote/frompartialrisk</p>		</td>
+<p style='font-size: 12px;font-weight: bold'>POST /v2/call/frompartialrisk</p>		</td>
 		<td>
 4		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35195&group_by=cases:section_id&group_order=asc&group_id=2478>#35195</a>: Ensure quick quote from partial risk is posted</p>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35196&group_by=cases:section_id&group_order=asc&group_id=2478>#35196</a>: Ensure quick quote is declined when age is under 18</p>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35197&group_by=cases:section_id&group_order=asc&group_id=2478>#35197</a>: Ensure quick quote is declined when address is incorrect</p>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35198&group_by=cases:section_id&group_order=asc&group_id=2478>#35198</a>: Ensure price values are correct for quick quotes</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35195&group_by=cases:section_id&group_order=asc&group_id=2478>#35195</a>: Ensure quick quote from partial risk is posted</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35196&group_by=cases:section_id&group_order=asc&group_id=2478>#35196</a>: Ensure quick quote is declined when age is under 18</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35197&group_by=cases:section_id&group_order=asc&group_id=2478>#35197</a>: Ensure quick quote is declined when address is incorrect</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35198&group_by=cases:section_id&group_order=asc&group_id=2478>#35198</a>: Ensure price values are correct for quick quotes</p>
 		</td>
 	</tr>
 	<tr>
 		<td>
 <p style='font-size: 12px;font-weight: bold'>Populate a full risk from the partial risk collected via widgets etc</p>		</td>
 		<td>
-<p style='font-size: 12px;font-weight: bold'>POST /v2/quickquote/populaterisk</p>		</td>
+<p style='font-size: 12px;font-weight: bold'>POST /v2/call/populaterisk</p>		</td>
 		<td>
 0		</td>
 		<td>
@@ -508,7 +507,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35199&group_by=cases:section_id&group_order=asc&group_id=2480>#35199</a>: Create setup intent</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35199&group_by=cases:section_id&group_order=asc&group_id=2480>#35199</a>: Create setup intent</p>
 		</td>
 	</tr>
 	<tr>
@@ -539,7 +538,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35206&group_by=cases:section_id&group_order=asc&group_id=2483>#35206</a>: Next page question set</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35206&group_by=cases:section_id&group_order=asc&group_id=2483>#35206</a>: Next page question set</p>
 		</td>
 	</tr>
 	<tr>
@@ -580,8 +579,8 @@
 		<td>
 2		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35204&group_by=cases:section_id&group_order=asc&group_id=2483>#35204</a>: Ensure quote is posted</p>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35205&group_by=cases:section_id&group_order=asc&group_id=2483>#35205</a>: Ensure quote is not posted when age is incorrect</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35204&group_by=cases:section_id&group_order=asc&group_id=2483>#35204</a>: Ensure quote is posted</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35205&group_by=cases:section_id&group_order=asc&group_id=2483>#35205</a>: Ensure quote is not posted when age is incorrect</p>
 		</td>
 	</tr>
 	<tr>
@@ -642,7 +641,7 @@
 		<td>
 1		</td>
 		<td>
-<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/35200&group_by=cases:section_id&group_order=asc&group_id=2481>#35200</a>: Get current user</p>
+<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/35200&group_by=cases:section_id&group_order=asc&group_id=2481>#35200</a>: Get current user</p>
 		</td>
 	</tr>
 </tbody></table>

@@ -11,8 +11,8 @@ namespace test_reports
         static void Main(string[] args)
         {
             var html = new ReportBuilder();
-            html.GenerateOpusHtml();
-            html.GeneratePlatformHtml();
+            html.GeneratetestHtml();
+            html.GenerateBaseHtml();
         }
     }
 }

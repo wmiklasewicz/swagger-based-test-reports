@@ -35,35 +35,35 @@ namespace test_reports
             return body;
         }
 
-        public void GenerateOpusHtml()
+        public void GeneratetestHtml()
         {
-            var table =_dataManager.GetTestCasesByReferences(_endpointsMap.OpusEndpointsMap());
-            string sectionNames = "'Config', 'Documents', 'Payments', 'Policy', 'Quote','Tobes', 'Reporting', 'Report Schedules', 'Stripe', 'User', 'Opus User Management','Opus Organization Management', 'Notes', 'Command', 'Portal', 'Webhooks', 'Subscription', 'Policy Search'";
-            var testCasesNumber = _dataManager.CountCoveredEndpoints(_endpointsMap.OpusEndpointsMap(), "/v1/");
-            var allEndpoints = _endpointsMap.OpusEndpointsMap().Keys.Count;
+            var table =_dataManager.GetTestCasesByReferences(_endpointsMap.testEndpointsMap());
+            string sectionNames = "'Config', 'Documents', 'Payments', 'Policy', 'Quote','Tobes', 'Reporting', 'Report Schedules', 'Stripe', 'User', 'test User Management','test Organization Management', 'Notes', 'Command', 'Portal', 'Webhooks', 'Subscription', 'Policy Search'";
+            var testCasesNumber = _dataManager.CountCoveredEndpoints(_endpointsMap.testEndpointsMap(), "/v1/");
+            var allEndpoints = _endpointsMap.testEndpointsMap().Keys.Count;
             var nonCoveredTestCasesNumber = allEndpoints - testCasesNumber;
             var coveredTestCasesNumber = allEndpoints - nonCoveredTestCasesNumber;
             var testCasesPerSections = _dataManager.ReturnTestCasesForSubsections("2453", "/v1/");
-            var classDiv = "opus";
-            var navbarDivID = "opusID";
-            var body = PopulateBody(table, "OPUS", nonCoveredTestCasesNumber.ToString(), coveredTestCasesNumber.ToString(), testCasesPerSections, classDiv, navbarDivID, sectionNames);
+            var classDiv = "test";
+            var navbarDivID = "testID";
+            var body = PopulateBody(table, "test", nonCoveredTestCasesNumber.ToString(), coveredTestCasesNumber.ToString(), testCasesPerSections, classDiv, navbarDivID, sectionNames);
             using StreamWriter outputFile = new StreamWriter(Path.Combine("Reports/index.html"));
             outputFile.WriteLine(body);
         }
 
-        public void GeneratePlatformHtml()
+        public void GenerateBaseHtml()
         {
-            var table = _dataManager.GetTestCasesByReferences(_endpointsMap.PlatformEndpointsMap());
-            var testCasesNumber = _dataManager.CountCoveredEndpoints(_endpointsMap.PlatformEndpointsMap(), "/v2/");
+            var table = _dataManager.GetTestCasesByReferences(_endpointsMap.BaseEndpointsMap());
+            var testCasesNumber = _dataManager.CountCoveredEndpoints(_endpointsMap.BaseEndpointsMap(), "/v2/");
             string sectionNames = "'Config', 'Line Of Business', 'Payments', 'Policies','Product', 'Quick Quotes', 'Stripe', 'User', 'Tobes','Quotes', 'Subscriptions', 'Documents'";
-            var allEndpoints = _endpointsMap.PlatformEndpointsMap().Keys.Count;
+            var allEndpoints = _endpointsMap.BaseEndpointsMap().Keys.Count;
             var nonCoveredTestCasesNumber = allEndpoints - testCasesNumber;
             var coveredTestCasesNumber = allEndpoints - nonCoveredTestCasesNumber;
             var testCasesPerSections = _dataManager.ReturnTestCasesForSubsections("2471", "/v2/");
-            var classDiv = "platform";
+            var classDiv = "Base";
             var navbarDivID = "platfromID";
-            var body = PopulateBody(table, "PLATFORM", nonCoveredTestCasesNumber.ToString(), coveredTestCasesNumber.ToString(), testCasesPerSections, classDiv, navbarDivID, sectionNames);
-            using StreamWriter outputFile = new StreamWriter(Path.Combine("Reports/platform.html"));
+            var body = PopulateBody(table, "Base", nonCoveredTestCasesNumber.ToString(), coveredTestCasesNumber.ToString(), testCasesPerSections, classDiv, navbarDivID, sectionNames);
+            using StreamWriter outputFile = new StreamWriter(Path.Combine("Reports/Base.html"));
             outputFile.WriteLine(body);
         }
 

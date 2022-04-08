@@ -16,9 +16,9 @@ namespace test_reports.APITestCoverageReport
 
         public DataManager()
         {
-            _client = new APIClient("https://aventus.testrail.io/");
-            _client.User = "wioletta.kisielewicz@aventusplatform.com";
-            _client.Password = "TestRail";
+            _client = new APIClient("https://test.testrail.io/");
+            _client.User = "";
+            _client.Password = "";
         }
 
         public object GetListAllTestCases()
@@ -94,7 +94,7 @@ namespace test_reports.APITestCoverageReport
                             var referenceString = i.Refs;
                             if (referenceString == value.Value.Item1)
                             {
-                                testName +=  "<p style='font-size: 12px'><a href=https://aventus.testrail.io/index.php?/cases/view/"
+                                testName +=  "<p style='font-size: 12px'><a href=https://test.testrail.io/index.php?/cases/view/"
                                     + i.Id.ToString() + "&group_by=cases:section_id&group_order=asc&group_id="
                                     + i.SectionId.ToString() + ">#" + i.Id.ToString() + "</a>: " + i.Title + "</p>\n";
                                 testNumber += 1;

@@ -1,7 +1,7 @@
 stages:
   - build
   - report
-image: aventusrob/aventus-dotnet-azcli:1.0
+image: testrob/test-dotnet-azcli:1.0
 
 before_script:
     - cd $CI_PROJECT_DIR;ls
@@ -14,7 +14,7 @@ build:
     - mkdir $ResultsDir/css
     - cd $CI_PROJECT_DIR;dotnet run
     - cp $CI_PROJECT_DIR/Reports/index.html $ResultsDir/index.html
-    - cp $CI_PROJECT_DIR/Reports/platform.html $ResultsDir/platform.html
+    - cp $CI_PROJECT_DIR/Reports/Base.html $ResultsDir/Base.html
     - cp $CI_PROJECT_DIR/Reports/style.css $ResultsDir/style.css
     - cp $CI_PROJECT_DIR/Reports/normalize.css $ResultsDir/normalize.css
   artifacts:
